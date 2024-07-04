@@ -16,7 +16,7 @@ public class Main {
         Optional<Integer> result = list.stream()
                 .map(x-> x+15)
                 .filter(x-> x>50)
-                .reduce ((x, y ) -> (x+y));
+                .reduce (Integer::sum);
 
 
         System.out.println(result);

@@ -22,11 +22,10 @@ public class Main2 {
                 .max(Integer::compareTo);
         System.out.println(result);
 
-        List<String> string = strings.stream()
+        Optional<String> string = strings.stream()
                 .filter(str -> (str.length() < 15))
-                .collect(toList())
-                .stream().max(Comparator.comparing(String::length))
-                .stream().toList();
+                .max(Comparator.comparing(String::length));
+
         System.out.println(string);
 
 
